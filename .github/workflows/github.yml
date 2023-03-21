@@ -44,9 +44,13 @@ jobs:
         with:
            creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
      
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-            app-name: 'javatestingapp'
+      - name: Verify app service
+        run: |
+          az webapp config appsettings list --javatestingapp --resource-group DemoRG --subscription 9df0a15b-63e9-43cc-af12-61231fadcf9f
+     
+#       - name: Deploy to Azure Web App
+#         id: deploy-to-webapp
+#         uses: azure/webapps-deploy@v2
+#         with:
+#             app-name: 'javatestingapp'
           
