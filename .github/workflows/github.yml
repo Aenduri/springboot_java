@@ -1,5 +1,4 @@
-name: Build and deploy JAR app to Azure Web App
-
+name: New test
 
 on:
   workflow_dispatch
