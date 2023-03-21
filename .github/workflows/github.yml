@@ -46,7 +46,7 @@ jobs:
      
       - name: Verify app service
         run: |
-          az webapp config appsettings list --javatestingapp --resource-group DemoRG --subscription 9df0a15b-63e9-43cc-af12-61231fadcf9f
+          az webapp config appsettings list --name javatestingapp --resource-group DemoRG --subscription 9df0a15b-63e9-43cc-af12-61231fadcf9f
      
 #       - name: Deploy to Azure Web App
 #         id: deploy-to-webapp
